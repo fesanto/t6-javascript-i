@@ -93,15 +93,56 @@ console.log("soma", soma)
 // Desta forma, por exemplo, se a sequência 
 // iniciar com o número 5 ter-se-á: 5; 16; 8; 4; 2; 1".
 
+let collatz = 5
+while(collatz > 1){
+    collatz = collatz / 2
+    if (collatz % 2 === 0){
+    }else {
+        collatz = collatz * 3 + 1
+    }
+}
+console.log(collatz)
+
+
+// 1 iteracao -> collatz = 5; IMPAR collatz = 5 * 3 + 1 = 16
+// 2 iteracao -> collatz = 16; PAR collatz = 16 / 2 = 8
+// 3 iteracao -> collatz = 8; PAR collatz = 8 / 2 = 4
+// 4 iteracao -> collatz = 4; PAR collatz = 4 / 2 = 2
+// 5 iteracao -> collatz = 2; PAR collatz = 2 / 2 = 1
+// 6 iteracao -> collatz = 1; PARA
 
 
 
 // Escreva um loop em Javascript que gera uma lista com 100
 // número randomicos.
 
+let arr []
+for (let lista = 0; lista < 100; lista++){
+    arr.push(Math.random())
+}
+console.log(arr)
 
+//ou
 
+let arr []
+while (arr.length < 100){
+    arr.push(Math.floor(Math.random()*100))
+}
 
 // Escreva um loop em Javascript que "lance uma moeda" a cada 
 // nova iteração. Considere 1 = cara, 0 = coroa. Rode esse loop 1000 vezes e
 // printe o numero de caras e o numero de coroas no console.
+
+let cara = 0
+let coroa = 0
+for (let i = 0; i < 1000; i++){
+    let moeda = Math.floor(Math.random()*2)
+    if (moeda === 1){
+        cara++
+    } else{
+        coroa++
+    }
+}
+console.log("cara", cara)
+console.log("coroa", coroa)
+
