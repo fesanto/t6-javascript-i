@@ -67,8 +67,9 @@ if(day == 0){
 // 	rand = false
 // }
 
-rand = Math.random() > 0.5 ? true : false
+let rand = Math.random() > 0.5 ? true : false
 
+//coloca "let" no inicio se a variável ainda não tiver sido declarada
 
 // Reescreva a próxima expressão usando
 // o operador ternário
@@ -87,4 +88,4 @@ rand = Math.random() > 0.5 ? true : false
 const r = Math.random() * 256
 const g = Math.random() * 256
 const b = Math.random() * 256
-color = r > g && r > b ? "Vermelho" : color = g > b && g > r ? "Verde" : "Azul"
+color = r > g && r > b ? "Vermelho" : g > b && g > r ? "Verde" : b > r && b > g ? "Azul" : undefined
