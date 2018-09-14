@@ -232,6 +232,10 @@ function Pokemon(nome, nome_japones){
             "Deu ruim",
             "Ash, vambora daqui"
         ]
-        return acoes[Math.floor(Math.random()* acoes.length)]
-    }
+		return acoes[Math.floor(Math.random() * acoes.length)]
+	}
+	this.pergunte = function () {
+		console.log(`O que ${this.nome} vai fazer?`)
+		return this.manda_ver()
+	}
 }
