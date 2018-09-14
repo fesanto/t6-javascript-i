@@ -5,13 +5,15 @@
 // de pokemons do Wikipedia.
 // ref: https://pt.wikipedia.org/wiki/Lista_de_Pok%C3%A9mon
 
-const pokemon = {
-	numero_nacional: 143,
-	nome: "Snorlax",
-	nome_japones: "Kabigon",
-	numero_johnto: 230,
-	evolui_de: "Munchlax",
-	janiarli_tem: true
+const rhyhorn = {
+    "numero": 111,
+    "nome": "Rhyhorn",
+    "nome_japones": "Sihorn",
+    "numero_em_Johto": "211",
+    "numero_em_Hoenn": null,
+    "numero_em_Sinnoh": null,
+    "numero_em_Unova": null,
+    "evolucao": "Ovo",
 }
 
 
@@ -19,28 +21,72 @@ const pokemon = {
 // Printe no console a seguinte
 // frase: "Hello, my name is < >.
 // And my name in Japanese is < >."
-pokemon.diga_ola = function () {
-	console.log(`Hello, my name is ${this.nome}. And my name in Japanese is ${this.nome_japones}.`)
+
+const alakazam = {
+    "numero": 065,
+    "nome": "Alakazam",
+    "nome_japones": "Foodin",
+    "numero_em_Johto": 091,
+    "numero_em_Hoenn": 041,
+    "numero_em_Sinnoh": 022,
+    "numero_em_Unova": null,
+    "evolucao": "Kadabra",
 }
+
+console.log(`Hello, my name is ${alakazam.nome}. And my name in Japanese is ${alakazam.nome_japones}.`)
+
+alakazam.diga_ola = function(){
+    console.log(`Hello, my name is ${this.nome}. And my name in Japanese is ${this.nome_japones}.`)
+} //***Uso THIS pq está dentro da função***
+
 
 // 3.
 // Adicione uma nova propriedade ao
 // seu pokemon chamada `can_fly` 
 // (ou algo do tipo) e defina
 // ela como `true` ou `false`.
-pokemon.can_fly = false
+
+const tentacool = {
+    "numero": 072,
+    "nome": "Tentacool",
+    "nome_japones": "Menokurage",
+    "numero_em_Johto": 164,
+    "numero_em_Hoenn": 066,
+    "numero_em_Sinnoh": 136,
+    "numero_em_Unova": null,
+    "evolucao": "Ovo",
+}
+
+tentacool.can_fly = true,
+
 
 // 4.
 // Adicione um método ao seu pokemon
 // chamado `fly` que retorna "Sorry,
 // I can't fly" ou "Flyyyyiinnngggg!".
-pokemon.fly = function () {
-	if (this.can_fly) {
-		return "Flyyyyiinnngggg!"
-	} else {
-		return "Sorry, I can't fly"
-	}
+
+const lickitung = {
+    "numero": 108,
+    "nome": "Lickitung",
+    "nome_japones": "Beroringa",
+    "numero_em_Johto": 180,
+    "numero_em_Hoenn": null,
+    "numero_em_Sinnoh": 161,
+    "numero_em_Unova": null,
+    "evolucao": "Ovo",
+    "can_fly": false,
 }
+
+lickitung.fly = function(){
+    if (this.can_fly) {
+        return "Flyyyyiinnngggg!"
+    } else {
+        return "Sorry, I can't fly"
+    }
+}
+
+lickitung.fly() //para chamar a funcao
+
 
 // 5.
 // Adicione um método chamado
